@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static java.net.HttpURLConnection.HTTP_OK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+// ляля тополя
 public class PetTests extends TestBase {
 
     @Test
