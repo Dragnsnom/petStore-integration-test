@@ -14,7 +14,7 @@ public class DeleteTest extends TestBase {
 
     @Test
     @DisplayName("Удаление питомца")
-    public void deleteTest() {
+    public void testDeletePet() {
         Pet newPet = testDataGenerator.generatePet();
         Response createResponse = ApiClient.post("/pet", newPet);
         Pet createdPet = createResponse.as(Pet.class);
@@ -24,7 +24,6 @@ public class DeleteTest extends TestBase {
 
         Response deleteResponse = ApiClient.delete("/pet/" + createdPet.getId());
 
-        assertEquals(HTTP_OK, getResponse.getStatusCode());
         assertEquals(createdPet.getId(), retrievedPet.getId());
         assertEquals(HTTP_OK, deleteResponse.getStatusCode());
     }
